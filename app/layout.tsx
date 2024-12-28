@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google' 
 import './globals.css'
 import { ThemeProvider } from '@/context/theme'
+import TopNav from '@/components/nav/TopNav'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -21,12 +22,13 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={poppins.className}>
-      <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <TopNav />
           {children}
         </ThemeProvider>
       </body>
