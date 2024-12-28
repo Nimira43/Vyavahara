@@ -4,6 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* :root {
+  --primary: #ffa500;
+  --secondary: #008080;
+  --neutral: #f5f5dc;
+  --dark: #111;
+  --light: #fff4f0;
+} */
+
+.logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #ffa500;
+}
+
+body {
+  background: #f5f5dc;
+  color: #111;
+}
 
 @layer base {
   :root {
