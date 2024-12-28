@@ -1,6 +1,7 @@
-import type { Metadata } from 'next';
+import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google' 
-import './globals.css';
+import './globals.css'
+import { ThemeProvider } from '@/context/theme'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -10,7 +11,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Vyavahara',
   description: 'Business Directory app using Next JS, Tailwind, TypeScript, Mongo Db and Shadcn',
-};
+}
 
 export default function RootLayout({
   children,
@@ -20,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={poppins.className}>
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
