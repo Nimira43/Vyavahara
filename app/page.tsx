@@ -1,4 +1,4 @@
-import ModeToggle from '@/components/nav/mode-toggle'
+import ModeToggle from '@/components/nav/ModeToggle'
 
 export default function Home() {
   return (
