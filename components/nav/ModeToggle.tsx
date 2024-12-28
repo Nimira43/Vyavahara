@@ -24,7 +24,9 @@ export default function ModeToggle() {
         theme === 'dark' ? 'light' : 'dark'
       )}
     >
-      {theme === 'dark' ? <PiSun size={18} /> : <PiMoon size={18} />
+      {theme === 'dark' 
+      ? <PiSun size={18} /> 
+      : <PiMoon size={18} />
       }
     </Button>
   )
