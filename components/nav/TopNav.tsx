@@ -7,8 +7,8 @@ import {
   MenubarTrigger,
 } from '@/components/ui/menubar'
 import ModeToggle from './ModeToggle'
-import Image from 'next/image'
-
+// import Image from 'next/image'
+import Link from 'next/link'
 
 export default function TopNav() {
   return (
@@ -16,7 +16,9 @@ export default function TopNav() {
       <div className="flex-none">
         <MenubarMenu>
           {/* <Image src='/logo2.svg' alt='logo' width={50} height='50' /> */}
-          <h1 className='logo'>Vyavahara</h1>
+          <Link href='/'>
+            <h1 className='logo hover:cursor-pointer'>Vyavahara</h1>
+          </Link>
         </MenubarMenu>
       </div>
       <div className="flex flex-grow item-center justify-end gap-1">
