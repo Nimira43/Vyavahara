@@ -4,16 +4,20 @@ import {
   MenubarItem,
   MenubarMenu,
   MenubarSeparator,
-  MenubarShortcut,
   MenubarTrigger,
 } from '@/components/ui/menubar'
 import ModeToggle from './ModeToggle'
+import Image from 'next/image'
+
 
 export default function TopNav() {
   return (
     <Menubar>
       <div className="flex-none">
-        <MenubarMenu>Logo</MenubarMenu>
+        <MenubarMenu>
+          {/* <Image src='/logo2.svg' alt='logo' width={50} height='50' /> */}
+          <h1 className='logo'>Vyavahara</h1>
+        </MenubarMenu>
       </div>
       <div className="flex flex-grow item-center justify-end gap-1">
         <MenubarMenu>
