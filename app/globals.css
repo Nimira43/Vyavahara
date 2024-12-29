@@ -15,8 +15,11 @@
 .logo {
   font-family: 'Great Vibes', cursive;
   font-size: 1.5rem;
+  letter-spacing: 1x;
   color: #ff4500;
+  padding-top: 2px;
   padding-left: 1rem;
+  
 }
 
 @layer base {
