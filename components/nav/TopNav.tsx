@@ -15,7 +15,6 @@ export default function TopNav() {
     <Menubar>
       <div className="flex-none">
         <MenubarMenu>
-          {/* <Image src='/logo2.svg' alt='logo' width={50} height='50' /> */}
           <Link href='/'>
             <h1 className='logo hover:cursor-pointer'>Vyavahara</h1>
           </Link>
