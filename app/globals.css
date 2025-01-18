@@ -11,8 +11,7 @@
   letter-spacing: 1x;
   color: #ff4500;
   padding-top: 2px;
-  padding-left: 1rem;
-  
+  padding-left: 1rem; 
 }
 
 @layer base {
