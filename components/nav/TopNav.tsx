@@ -7,7 +7,6 @@ import {
   MenubarTrigger,
 } from '@/components/ui/menubar'
 import ModeToggle from './ModeToggle'
-// import Image from 'next/image'
 import Link from 'next/link'
 
 export default function TopNav() {
