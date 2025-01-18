@@ -4,13 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --primary: #ffa500;
-  --secondary: #008080;
-  --neutral: #f5f5dc;
-  --dark: #111;
-  --light: #fff4f0;
-} */
 
 .logo {
   font-family: 'Great Vibes', cursive;
