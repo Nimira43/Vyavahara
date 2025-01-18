@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/menubar'
 import ModeToggle from './ModeToggle'
 import Link from 'next/link'
+import { SignInButton, SignedIn, SignOutButton, SignedOut, UserButton } from '@clerk/nextjs'
 
 export default function TopNav() {
   return (
@@ -30,6 +31,12 @@ export default function TopNav() {
             <MenubarItem>Job 2</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
         <MenubarMenu>
           <ModeToggle />
         </MenubarMenu>
