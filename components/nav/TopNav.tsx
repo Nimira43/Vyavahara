@@ -26,15 +26,28 @@ export default function TopNav() {
       <div className="flex flex-grow item-center justify-end gap-1">
         <MenubarMenu>
           <MenubarTrigger className='text-base font-normal'>
-            <Link href='/business/add'>Add Business</Link>
+            <Link href='/business/add'>
+              <span className='flex items-center'>
+                <HiPlus size={16} className='mr-2 text-primary' />  
+                <span>Add Business</span>
+              </span>
+            </Link>
           </MenubarTrigger>
         </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger className='text-base font-normal'>
-            <Link href='/dashboard'>Dashboard</Link>
+            <Link href='/dashboard'>
+              <span className='flex items-center'>
+                <MdOutlineSpaceDashboard size={16} className='mr-2 text-primary' />  
+                <span>Dashboard</span>
+              </span>
+            </Link>
           </MenubarTrigger>
         </MenubarMenu>
         <SignedOut>
+          <span className='flex items-center'>
+            <BiLogInCircle size={16} className='mr-2 text-primary' />
+          </span>
           <SignInButton />
         </SignedOut>
         <SignedIn>
