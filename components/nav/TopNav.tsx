@@ -23,6 +23,11 @@ export default function TopNav() {
       <div className="flex flex-grow item-center justify-end gap-1">
         <MenubarMenu>
           <MenubarTrigger className='text-base font-normal'>
+            <Link href='/business/add'>Add Business</Link>
+          </MenubarTrigger>
+        </MenubarMenu>
+        <MenubarMenu>
+          <MenubarTrigger className='text-base font-normal'>
             <Link href='/dashboard'>Dashboard</Link>
           </MenubarTrigger>
         </MenubarMenu>
