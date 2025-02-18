@@ -9,6 +9,9 @@ import {
 import ModeToggle from './ModeToggle'
 import Link from 'next/link'
 import { SignInButton, SignedIn, SignOutButton, SignedOut, UserButton } from '@clerk/nextjs'
+import { MdOutlineSpaceDashboard } from 'react-icons/md'
+import { HiPlus } from 'react-icons/hi'
+import { BiLogInCircle } from 'react-icons/bi'
 
 export default function TopNav() {
   return (
