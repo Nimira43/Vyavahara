@@ -48,3 +48,16 @@ interface BusinessContextType {
 }
 
 const BusinessContext = createContext<BusinessContextType | undefined>(undefined)
+
+export const BusinessProvider: React.FC<{ children: ReactNode }> = ({
+  children
+}) => {
+  const [business, setBusiness] = useState<BusinessState>(initialState)
+  return (
+    <BusinessContext.Provider
+      value={{ business, setBusiness}}
+    >
+      {children}
+    </BusinessContext.Provider>
+  )
+}
