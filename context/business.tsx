@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, createServerContext, useState, ReactNode } from 'react'
+import { createContext, useContext, useState, ReactNode } from 'react'
 
 interface BusinessState {
   _id: string
@@ -15,7 +15,6 @@ interface BusinessState {
   hours: string
   logo: string
   businessNumber: string
-  status: string
   slug: string
   published?: boolean
   createdAt: string
@@ -63,4 +62,12 @@ export const BusinessProvider: React.FC<{ children: ReactNode }> = ({
       {children}
     </BusinessContext.Provider>
   )
+}
+
+export const useBusiness = () => {
+  const context = useContext(BusinessContext)
+  if (context === undefined) {
+    throw new Error('useBusiness must be used within a BusinessProvider')
+  }
+  return context
 }
