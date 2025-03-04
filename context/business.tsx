@@ -41,3 +41,10 @@ const initialState: BusinessState = {
   updatedAt: "",
   __v: 0
 }
+
+interface BusinessContextType {
+  business: BusinessState
+  setBusiness: React.Dispatch<React.SetStateAction<BusinessState>>
+}
+
+const BusinessContext = createContext<BusinessContextType | undefined>(undefined)
