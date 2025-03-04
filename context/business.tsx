@@ -58,7 +58,7 @@ export const BusinessProvider: React.FC<{ children: ReactNode }> = ({
   const [loading, setLoading] = useState<boolean>(false)
   return (
     <BusinessContext.Provider
-      value={{ business, setBusiness}}
+      value={{ business, setBusiness, loading, setLoading}}
     >
       {children}
     </BusinessContext.Provider>
