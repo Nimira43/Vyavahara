@@ -21,5 +21,23 @@ interface BusinessState {
   createdAt: string
   updatedAt: string
   __v: number
+}
 
+const initialState: BusinessState = {
+  _id: "",
+  userEmail: "",
+  name: "",
+  category: "",
+  description: "",
+  address: "",
+  phone: "",
+  email: "",
+  website: "",
+  hours: "",
+  logo: "",
+  businessNumber: "",
+  slug: "",
+  createdAt: "",
+  updatedAt: "",
+  __v: 0
 }
