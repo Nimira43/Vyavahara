@@ -12,8 +12,11 @@ import { SignInButton, SignedIn, SignOutButton, SignedOut, UserButton } from '@c
 import { MdOutlineSpaceDashboard } from 'react-icons/md'
 import { HiPlus } from 'react-icons/hi'
 import { BiLogInCircle } from 'react-icons/bi'
+import { currentUser } from '@clerk/nextjs/server'
 
-export default function TopNav() {
+export default async function TopNav() {
+  const user = await currentUser()
+
   return (
     <Menubar>
       <div className="flex-none">
@@ -34,25 +37,33 @@ export default function TopNav() {
             </Link>
           </MenubarTrigger>
         </MenubarMenu>
-        <MenubarMenu>
-          <MenubarTrigger className='text-base font-normal'>
-            <Link href='/dashboard'>
-              <span className='flex items-center'>
-                <MdOutlineSpaceDashboard size={16} className='mr-2 text-primary' />  
-                <span>Dashboard</span>
-              </span>
-            </Link>
-          </MenubarTrigger>
-        </MenubarMenu>
+        
+        {user && (
+          <MenubarMenu>
+            <MenubarTrigger className='text-base font-normal'>
+              <Link href='/dashboard'>
+                <span className='flex items-center'>
+                  <MdOutlineSpaceDashboard size={16} className='mr-2 text-primary' />  
+                  <span>Dashboard</span>
+                </span>
+              </Link>
+            </MenubarTrigger>
+          </MenubarMenu>
+        )}
+               
         <SignedOut>
           <span className='flex items-center'>
             <BiLogInCircle size={16} className='mr-2 text-primary' />
           </span>
           <SignInButton />
         </SignedOut>
+        
+        
         <SignedIn>
           <UserButton />
         </SignedIn>
+        
+        
         <MenubarMenu>
           <ModeToggle />
         </MenubarMenu>
