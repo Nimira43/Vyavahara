@@ -34,7 +34,19 @@ export default function AddBusiness() {
 
       <div className='flex flex-col lg:w-1/2 p-4 lg:order-first lg:flex lg:justify-center lg:items-center'>
         Form
-        <pre>{JSON.stringify(business, null, 4)}</pre>
+        <h1>Enter your business details</h1>
+        {inputFields.map((item, index) => (
+          <div key={index}>
+            <label htmlFor={item.name}>{item.label}</label>
+            <Input
+              name={item.name}
+              type={item.type}
+              required={item.required}
+              onChange={handleChange}
+              // value={business[item.name as keyof BusinessState] || ''}
+            />
+          </div>
+        ))}
       </div>
     </div>
   )
