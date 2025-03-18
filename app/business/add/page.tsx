@@ -9,7 +9,15 @@ interface InputField {
 }
 
 const inputFields: InputField = [
-  { name: 'name', type: 'type', label: 'Name', placeholder: 'Business Name'}
+  { name: 'name', type: 'text', label: 'Name', placeholder: 'Business Name'},
+  { name: 'category', type: 'text', label: 'Category', placeholder: 'Category'},
+  { name: 'description', type: 'text', label: 'Description', placeholder: 'Description'},
+  { name: 'address', type: 'text', label: 'Address', placeholder: 'Address'},
+  { name: 'phone', type: 'text', label: 'Phone', placeholder: 'Phone'},
+  { name: 'email', type: 'text', label: 'Email', placeholder: 'Email'},
+  { name: 'website', type: 'text', label: 'Website', placeholder: 'Website'},
+  { name: 'hours', type: 'text', label: 'Hours', placeholder: 'Hours'},
+  { name: 'logo', type: 'text', label: 'Logo', placeholder: 'Logo'}
 ]
 
 export default function AddBusiness() {
