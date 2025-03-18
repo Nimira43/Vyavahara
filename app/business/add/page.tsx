@@ -8,6 +8,9 @@ interface InputField {
   placeholder: string
 }
 
+const inputFields: InputField = [
+  { name: 'name', type: 'type', label: 'Name', placeholder: 'Business Name'}
+]
 
 export default function AddBusiness() {
   const { business } = useBusiness()
