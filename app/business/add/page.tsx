@@ -3,22 +3,23 @@ import { useBusiness } from '@/context/business'
 
 interface InputField {
   name: string
-  type: string
   label: string
-  required: true
+  type: string
+  required?: true
   accept?: string
 }
 
 const inputFields: InputField = [
-  { name: 'name', type: 'text', label: 'Name', required: true},
-  { name: 'category', type: 'text', label: 'Category', required: true},
-  { name: 'description', type: 'text', label: 'Description', required: true},
-  { name: 'address', type: 'text', label: 'Address', required: true},
-  { name: 'phone', type: 'text', label: 'Phone', required: true},
-  { name: 'email', type: 'text', label: 'Email', required: true},
-  { name: 'website', type: 'text', label: 'Website', required: true},
-  { name: 'hours', type: 'text', label: 'Hours', required: true},
-  { name: 'logo', type: 'text', label: 'Logo', required: true}
+  { name: 'name',  label: 'Business Name', type: 'text', required: true},
+  { name: 'category', label: 'Business Category', type: 'text', required: true},
+  { name: 'address', label: 'Business Address', type: 'text', required: true},
+  { name: 'description', label: 'Business Description', type: 'text', required: true },
+  { name: 'phone', label: 'Phone', type: 'tel'},
+  { name: 'email', label: 'Email', type: 'email'},
+  { name: 'website', label: 'Website', type: 'url'},
+  { name: 'hours', label: 'Opening Hours', type: 'text' },
+  { name: 'ern', label: 'Employer Reference Number', type: 'text' }
+  { name: 'logo', label: 'Logo', type: 'file', accept: 'image/*'}
 ]
 
 export default function AddBusiness() {
