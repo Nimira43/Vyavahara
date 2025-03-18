@@ -37,11 +37,10 @@ export default function AddBusinessPage() {
   
   return (
     <div className='flex flex-col lg:flex-row h-screen'>
-      <div className='flex flex-col lg:w-1/2 p-4 lg:order-last lg:flex lg:justify-center lg:items-center'>Preview</div>
-
+      <div className='flex flex-col lg:w-1/2 p-4 lg:order-last lg:flex lg:justify-center lg:items-center'>Vyavahara Business Directory</div>
 
       <div className='flex flex-col lg:w-1/2 p-4 lg:order-first lg:flex lg:justify-center lg:items-center'>
-        Form
+        Business Details Form
         <h1>Enter your business details</h1>
         {inputFields.map((item, index) => (
           <div
