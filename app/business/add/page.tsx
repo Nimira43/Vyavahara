@@ -26,6 +26,14 @@ const inputFields: InputField = [
 
 export default function AddBusinessPage() {
   const { business } = useBusiness()
+
+  const handleChange = () => {
+
+  }
+
+  const handleSubmit = () => {
+    
+  }
   
   return (
     <div className='flex flex-col lg:flex-row h-screen'>
