@@ -44,8 +44,16 @@ export default function AddBusinessPage() {
         Form
         <h1>Enter your business details</h1>
         {inputFields.map((item, index) => (
-          <div key={index}>
-            <label htmlFor={item.name}>{item.label}</label>
+          <div
+            key={index}
+            className='my-2 w-full'
+          >
+            <label
+              htmlFor={item.name}
+              className='text-xs'
+            >
+              {item.label}
+            </label>
             <Input
               name={item.name}
               type={item.type}
@@ -55,6 +63,13 @@ export default function AddBusinessPage() {
             />
           </div>
         ))}
+        <Button
+          onClick={handleSubmit}
+          type='submit'
+          className='my-5'
+        >
+          Submit  
+        </Button>
       </div>
     </div>
   )
