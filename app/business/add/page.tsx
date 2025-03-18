@@ -11,7 +11,7 @@ interface InputField {
   accept?: string
 }
 
-const inputFields: InputField = [
+const inputFields: InputField[] = [
   { name: 'name',  label: 'Business Name', type: 'text', required: true},
   { name: 'category', label: 'Business Category', type: 'text', required: true},
   { name: 'address', label: 'Business Address', type: 'text', required: true},
@@ -32,7 +32,7 @@ export default function AddBusinessPage() {
   }
 
   const handleSubmit = () => {
-    
+
   }
   
   return (
