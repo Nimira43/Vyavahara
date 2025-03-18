@@ -24,7 +24,7 @@ const inputFields: InputField = [
   { name: 'logo', label: 'Logo', type: 'file', accept: 'image/*'}
 ]
 
-export default function AddBusiness() {
+export default function AddBusinessPage() {
   const { business } = useBusiness()
   
   return (
