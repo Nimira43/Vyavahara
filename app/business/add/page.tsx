@@ -1,6 +1,7 @@
 'use client'
 import { useBusiness } from '@/context/business'
 import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
 
 interface InputField {
   name: string
