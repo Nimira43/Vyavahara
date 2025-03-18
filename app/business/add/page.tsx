@@ -1,5 +1,6 @@
 'use client'
 import { useBusiness } from '@/context/business'
+import { Input } from '@/components/ui/input'
 
 interface InputField {
   name: string
@@ -18,7 +19,7 @@ const inputFields: InputField = [
   { name: 'email', label: 'Email', type: 'email'},
   { name: 'website', label: 'Website', type: 'url'},
   { name: 'hours', label: 'Opening Hours', type: 'text' },
-  { name: 'ern', label: 'Employer Reference Number', type: 'text' }
+  { name: 'ern', label: 'Employer Reference Number', type: 'text' },
   { name: 'logo', label: 'Logo', type: 'file', accept: 'image/*'}
 ]
 
