@@ -1,6 +1,14 @@
 'use client'
 import { useBusiness } from '@/context/business'
 
+interface InputField {
+  name: string
+  type: string
+  label: string
+  placeholder: string
+}
+
+
 export default function AddBusiness() {
   const { business } = useBusiness()
   
