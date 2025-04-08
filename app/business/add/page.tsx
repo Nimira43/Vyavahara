@@ -37,11 +37,13 @@ export default function AddBusinessPage() {
   
   return (
     <div className='flex flex-col lg:flex-row h-screen'>
-      <div className='flex flex-col lg:w-1/2 p-4 lg:order-last lg:flex lg:justify-center lg:items-center overflow-y-auto'>Vyavahara Business Directory</div>
+      <div className='flex flex-col lg:w-1/2 p-4 lg:order-last lg:flex lg:justify-center lg:items-center overflow-y-auto '>
+        <h1 className='text-2xl'>Vyavahara Business Directory</h1>
+      </div>
 
       <div className='flex flex-col lg:w-1/2 p-4 lg:order-first lg:flex overflow-y-auto'>
-        Business Details Form
-        <h1>Enter your business details</h1>
+        <h1 className='text-2xl'>Business Details Form</h1>
+        <p className='my-2'>Enter your business details</p>
         {inputFields.map((item, index) => (
           <div
             key={index}
