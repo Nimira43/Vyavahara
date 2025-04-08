@@ -43,7 +43,7 @@ export default function AddBusinessPage() {
 
       <div className='flex flex-col lg:w-1/2 p-4 lg:order-first lg:flex overflow-y-auto'>
         <h1 className='text-2xl'>Business Details Form</h1>
-        <p className='my-2'>Enter your business details</p>
+        <p>Enter your business details</p>
         {inputFields.map((item, index) => (
           <div
             key={index}
