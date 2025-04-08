@@ -3,7 +3,6 @@
 import { createContext, useContext, useState, ReactNode } from 'react'
 import { BusinessState } from '@/utils/types/business'
 
-
 const initialState: BusinessState = {
   _id: "",
   userEmail: "",

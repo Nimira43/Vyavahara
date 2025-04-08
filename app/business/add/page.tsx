@@ -2,6 +2,7 @@
 import { useBusiness } from '@/context/business'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
+import { BusinessState } from '@/utils/types/business'
 
 interface InputField {
   name: string
@@ -60,7 +61,10 @@ export default function AddBusinessPage() {
               type={item.type}
               required={item.required}
               onChange={handleChange}
-              // value={business[item.name as keyof BusinessState] || ''}
+              value={(business[item.name as keyof BusinessState] || '') as 
+                | string
+                | number
+              }
             />
           </div>
         ))}
