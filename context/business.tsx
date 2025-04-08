@@ -35,7 +35,19 @@ export const BusinessProvider: React.FC<{ children: ReactNode }> = ({
   children
 }) => {
   const [business, setBusiness] = useState<BusinessState>(initialState)
+  
   const [loading, setLoading] = useState<boolean>(false)
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target
+    setBusiness((prevBusiness: BusinessState) => {
+      const updatedBusiness = {
+        ...prevBusiness, [name]: value
+      }
+      return updatedBusiness
+    })
+  }
+
   return (
     <BusinessContext.Provider
       value={{ business, setBusiness, loading, setLoading}}
