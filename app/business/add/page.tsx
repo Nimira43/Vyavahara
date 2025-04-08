@@ -26,16 +26,8 @@ const inputFields: InputField[] = [
 ]
 
 export default function AddBusinessPage() {
-  const { business } = useBusiness()
+  const { business, handleChange, handleSubmit } = useBusiness()
 
-  const handleChange = () => {
-
-  }
-
-  const handleSubmit = () => {
-
-  }
-  
   return (
     <div className='flex flex-col lg:flex-row h-screen'>
       <div className='flex flex-col lg:w-1/2 p-4 lg:order-last lg:flex lg:justify-center lg:items-center overflow-y-auto '>

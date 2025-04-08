@@ -27,6 +27,8 @@ interface BusinessContextType {
   setBusiness: React.Dispatch<React.SetStateAction<BusinessState>>
   loading: boolean
   setLoading: React.Dispatch<React.SetStateAction<boolean>>
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  handleSubmit: (e: React.FormEvent) => void
 }
 
 const BusinessContext = createContext<BusinessContextType | undefined>(undefined)
@@ -48,9 +50,21 @@ export const BusinessProvider: React.FC<{ children: ReactNode }> = ({
     })
   }
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log(business)
+  }
+
   return (
     <BusinessContext.Provider
-      value={{ business, setBusiness, loading, setLoading}}
+      value={{
+        business,
+        setBusiness,
+        loading,
+        setLoading,
+        handleChange,
+        handleSubmit,
+      }}
     >
       {children}
     </BusinessContext.Provider>
