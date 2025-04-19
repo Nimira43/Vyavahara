@@ -41,6 +41,9 @@ export const BusinessProvider: React.FC<{ children: ReactNode }> = ({
 
   useEffect(() => {
     const savedBusiness = localStorage.getItem('business')
+    if (savedBusiness) {
+      setBusiness(JSON.parse(savedBusiness))
+    }
   }, [])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
