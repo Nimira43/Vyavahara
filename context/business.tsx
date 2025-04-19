@@ -46,6 +46,7 @@ export const BusinessProvider: React.FC<{ children: ReactNode }> = ({
       const updatedBusiness = {
         ...prevBusiness, [name]: value
       }
+      localStorage.setItem('business', JSON.stringify(updatedBusiness))
       return updatedBusiness
     })
   }
