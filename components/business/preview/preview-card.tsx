@@ -26,9 +26,9 @@ export default function PreviewCard({ business }: { business: BusinessState }) {
             />
           ) : (
             <div
-              className='w-full h-full bg-main flex items-center justify-center'
+              className='w-full h-full bg-main-light flex items-center justify-center'
             >
-              <span className='text-light'>No Logo</span>
+              <span className='text-light text-xs'>No Logo</span>
             </div>
           )}
         </div>
