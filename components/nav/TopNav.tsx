@@ -31,7 +31,7 @@ export default async function TopNav() {
           <MenubarTrigger className='text-base font-normal'>
             <Link href='/business/add'>
               <span className='flex items-center'>
-                <HiPlus size={16} className='mr-2 text-primary' />  
+                <HiPlus size={16} className='mr-2 text-main-light' />  
                 <span>Add Business</span>
               </span>
             </Link>
@@ -43,7 +43,7 @@ export default async function TopNav() {
             <MenubarTrigger className='text-base font-normal'>
               <Link href='/dashboard'>
                 <span className='flex items-center'>
-                  <MdOutlineSpaceDashboard size={16} className='mr-2 text-primary' />  
+                  <MdOutlineSpaceDashboard size={16} className='mr-2 text-main-light' />  
                   <span>Dashboard</span>
                 </span>
               </Link>
@@ -53,7 +53,7 @@ export default async function TopNav() {
                
         <SignedOut>
           <span className='flex items-center'>
-            <BiLogInCircle size={16} className='mr-2 text-primary' />
+            <BiLogInCircle size={16} className='mr-2 text-main-light' />
           </span>
           <SignInButton />
         </SignedOut>
