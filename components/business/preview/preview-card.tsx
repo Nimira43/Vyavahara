@@ -24,7 +24,13 @@ export default function PreviewCard({ business }: { business: BusinessState }) {
               layout='fill'
               objectFit='cover'
             />
-          ) : ()}
+          ) : (
+            <div
+              className='w-full h-full bg-primary flex itc'
+            >
+                
+            </div>
+          )}
         </div>
       </CardHeader>
     </Card>
