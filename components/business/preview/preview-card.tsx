@@ -2,11 +2,11 @@
 
 import { BusinessState } from '@/utils/types/business'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { VscLocation } from "react-icons/vsc"
-import { TbPhone } from "react-icons/tb"
-import { AiOutlineMail } from "react-icons/ai"
-import { PiGlobeStandLight } from "react-icons/pi"
-import { BsClock } from "react-icons/bs"
+import { VscLocation } from 'react-icons/vsc'
+import { TbPhone } from 'react-icons/tb'
+import { AiOutlineMail } from 'react-icons/ai'
+import { PiGlobeStandLight } from 'react-icons/pi'
+import { BsClock } from 'react-icons/bs'
 import Image from 'next/image'
 
 export default function PreviewCard({ business }: { business: BusinessState }) {
