@@ -31,7 +31,7 @@ export default function AddBusinessPage() {
 
   return (
     <div className='flex flex-col lg:flex-row h-screen'>
-      <div className='flex flex-col lg:w-1/2 p-4 lg:order-last lg:flex lg:justify-center lg:items-center overflow-y-auto '>
+      <div className='flex flex-col lg:w-1/2 p-4 lg:order-last lg:flex lg:justify-center lg:items-center overflow-y-auto min-h-[354px]'>
         <PreviewCard business={business}/>
       </div>
 
