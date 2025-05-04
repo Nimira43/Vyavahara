@@ -10,8 +10,11 @@ import { BsClock } from "react-icons/bs"
 
 export default function PreviewCard({ business }: { business: BusinessState }) {
   return (
-    <div>
+    <Card
+      className='w-full max-w-2xl mx-auto'
+      style={{height: '354px'}}
+    >
       
-    </div>
+    </Card>
   )
 }
