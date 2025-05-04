@@ -3,6 +3,7 @@ import { useBusiness } from '@/context/business'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { BusinessState } from '@/utils/types/business'
+import PreviewCard from '@/components/business/preview/preview-card'
 
 interface InputField {
   name: string
