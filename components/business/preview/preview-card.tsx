@@ -34,7 +34,7 @@ export default function PreviewCard({ business }: { business: BusinessState }) {
         </div>
         <div className='flex-1 min-w-0'>
           <CardTitle
-            className='text-lg line-clamp-1'
+            className='text-lg font-medium line-clamp-1'
           >
             {business.name}
           </CardTitle>
@@ -47,4 +47,8 @@ export default function PreviewCard({ business }: { business: BusinessState }) {
       </CardHeader>
     </Card>
   )
+}
+
+function InfoItem({ icon: Icon, text }: { icon: any, text: string }) {
+  
 }
