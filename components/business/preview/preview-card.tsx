@@ -45,6 +45,18 @@ export default function PreviewCard({ business }: { business: BusinessState }) {
           </p>
         </div>
       </CardHeader>
+      <CardContent>
+        <p className='text-sm mb-4 line-clamp-3'>
+          {business?.description || 'Generated description will appear here.'}
+        </p>
+        <div className='space-y-2'>
+          <InfoItem icon={VscLocation} text={business.address || 'Address'} />
+          <InfoItem icon={TbPhone} text={business.phone || 'Phone'} />
+          <InfoItem icon={AiOutlineMail} text={business.email || 'Email'} />
+          <InfoItem icon={PiGlobeStandLight} text={business.website || 'Website'} />
+          <InfoItem icon={BsClock} text={business.hours || 'Hours'} />
+        </div>
+      </CardContent>
     </Card>
   )
 }
