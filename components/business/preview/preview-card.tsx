@@ -50,5 +50,10 @@ export default function PreviewCard({ business }: { business: BusinessState }) {
 }
 
 function InfoItem({ icon: Icon, text }: { icon: any, text: string }) {
-  
+  return (
+    <div className='flex items-center text-sm'>
+      <Icon className='mr-2 h-4 w-4 text-main-light flex-shrink-0' />
+      <span className='line-clamp-1'>{text}</span>
+    </div>
+  )
 }
