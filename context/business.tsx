@@ -67,6 +67,8 @@ export const BusinessProvider: React.FC<{ children: ReactNode }> = ({
     if (!isSignedIn) {
       openSignIn()
       return
+    } else {
+      alert('Save Business')
     }
   }
 
