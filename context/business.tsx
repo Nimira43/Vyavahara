@@ -40,6 +40,9 @@ export const BusinessProvider: React.FC<{ children: ReactNode }> = ({
 }) => {
   const [business, setBusiness] = useState<BusinessState>(initialState)
   const [loading, setLoading] = useState<boolean>(false)
+  const { openSignIn } = useClerk()
+  const { isSignedIn } = useUser()
+
 
   useEffect(() => {
     const savedBusiness = localStorage.getItem('business')
