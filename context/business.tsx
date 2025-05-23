@@ -64,7 +64,10 @@ export const BusinessProvider: React.FC<{ children: ReactNode }> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log(business)
+    if (!isSignedIn) {
+      openSignIn()
+      return
+    }
   }
 
   return (
