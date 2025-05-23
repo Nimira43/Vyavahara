@@ -1,6 +1,8 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
+import { useClerk, useUser } from '@clerk/nextjs'
+
 import { BusinessState } from '@/utils/types/business'
 
 const initialState: BusinessState = {
