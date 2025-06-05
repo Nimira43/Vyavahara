@@ -1,5 +1,5 @@
-import mongodb from 'mongodb'
+import mongoose from 'mongoose'
 
 export default async function db() {
-  
+
 }
