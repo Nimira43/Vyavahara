@@ -37,3 +37,7 @@ const BusinessSchema = new mongoose.Schema(
   timestamps: true
   }
 )
+
+const Business = mongoose.models.Business || mongoose.model('Business', BusinessSchema)
+
+export default Business
