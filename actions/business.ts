@@ -8,5 +8,9 @@ import { nanoid } from 'nanoid'
 import slugify from 'slugify'
 
 export const saveBusinessToDb = async (data: BusinessState) => {
-  
+  try {
+    
+  } catch (err: any) {
+    throw new Error(err)
+  }
 }
