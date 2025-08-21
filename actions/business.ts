@@ -12,6 +12,8 @@ export const saveBusinessToDb = async (data: BusinessState) => {
     await db()
     const user = await currentUser()
     const userEmail = user?.emailAddresses[0].emailAddress
+    const { _id, ...rest } = data
+    const slug = slugify(`${rest.category}-${rest.name}-${rest.address}-${nanoid()}`)
   } catch (err: any) {
     throw new Error(err)
   }
