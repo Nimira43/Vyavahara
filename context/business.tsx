@@ -70,6 +70,7 @@ export const BusinessProvider: React.FC<{ children: ReactNode }> = ({
     } else {
       setLoading(true)
       const saveBusiness = await saveBusinessToDb(business)
+      setBusiness(saveBusiness)
     }
   }
 
