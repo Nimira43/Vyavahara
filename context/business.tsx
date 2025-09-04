@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 import { useClerk, useUser } from '@clerk/nextjs'
-
+import { saveBusinessToDb } from '@/actions/business'
 import { BusinessState } from '@/utils/types/business'
 
 const initialState: BusinessState = {
@@ -62,13 +62,14 @@ export const BusinessProvider: React.FC<{ children: ReactNode }> = ({
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!isSignedIn) {
       openSignIn()
       return
     } else {
-      alert('Save Business')
+      setLoading(true)
+      const saveBusiness = await saveBusinessToDb(business)
     }
   }
 
