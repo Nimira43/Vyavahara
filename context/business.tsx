@@ -68,9 +68,18 @@ export const BusinessProvider: React.FC<{ children: ReactNode }> = ({
       openSignIn()
       return
     } else {
+
+      try {
+        
+      } catch (err: any) {
+        console.log(err)        
+      }
+
+
       setLoading(true)
       const saveBusiness = await saveBusinessToDb(business)
-      setBusiness(saveBusiness)
+      setBusiness(saveBusiness )
+      alert('Business created successfully')
     }
   }
 
