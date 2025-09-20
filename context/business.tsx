@@ -73,6 +73,8 @@ export const BusinessProvider: React.FC<{ children: ReactNode }> = ({
         
       } catch (err: any) {
         console.log(err)        
+      } finally {
+        setLoading(false)
       }
 
 
