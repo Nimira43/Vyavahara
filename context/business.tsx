@@ -72,7 +72,7 @@ export const BusinessProvider: React.FC<{ children: ReactNode }> = ({
       try {
         setLoading(true)
         const saveBusiness = await saveBusinessToDb(business)
-        setBusiness(saveBusiness )
+        setBusiness(saveBusiness)
         alert('Business created successfully')
       } catch (err: any) {
         console.log(err)        

@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const BusinessSchema = new mongoose.Schema(
   {
-    useEmail: {
+    userEmail: {
       type: String,
       required: true,
     },
