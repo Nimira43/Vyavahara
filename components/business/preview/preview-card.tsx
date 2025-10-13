@@ -16,8 +16,14 @@ export default function PreviewCard({ business }: { business: BusinessState }) {
       style={{height: '354px'}}
     >
       <CardHeader className='flex flex-row items-center space-x-4 pb-2'>
-        <div className='w-16 h-16 relative overflow-hidden rounded-md'>
-          {business?.logo ? (
+        <div className='w-16 h-16 relative overflow-hidden rounded-md'>     
+          {business?.logo?.startsWith('blob:') ? (
+            <img
+              src={business.logo}
+              alt={business.name}
+              className='w-full h-full object-cover'
+            />
+          ) : business?.logo?.startsWith('http') ? (
             <Image
               src={business.logo}
               alt={business.name}
@@ -25,9 +31,7 @@ export default function PreviewCard({ business }: { business: BusinessState }) {
               objectFit='cover'
             />
           ) : (
-            <div
-              className='w-full h-full bg-main-light flex items-center justify-center'
-            >
+            <div className='w-full h-full bg-main-light flex items-center justify-center'>
               <span className='text-light text-xs'>No Logo</span>
             </div>
           )}
@@ -69,3 +73,20 @@ function InfoItem({ icon: Icon, text }: { icon: any, text: string }) {
     </div>
   )
 }
+
+// Code that was causing issues
+
+{/* {business?.logo ? (
+      <Image
+        src={business.logo}
+        alt={business.name}
+        layout='fill'
+        objectFit='cover'
+      />
+    ) : (
+      <div
+        className='w-full h-full bg-main-light flex items-center justify-center'
+      >
+        <span className='text-light text-xs'>No Logo</span>
+      </div>
+    )} */}

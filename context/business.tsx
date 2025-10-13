@@ -52,13 +52,24 @@ export const BusinessProvider: React.FC<{ children: ReactNode }> = ({
   }, [])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    setBusiness((prevBusiness: BusinessState) => {
-      const updatedBusiness = {
-        ...prevBusiness, [name]: value
+    const { name, value, files } = e.target
+
+    if (name === 'logo' && files?.[0]) {
+      const previewUrl = URL.createObjectURL(files[0])
+      setBusiness(prev => {
+        const updated = { ...prev, logo: previewUrl }
+        localStorage.setItem('business', JSON.stringify(updated))
+        return updated
+      })
+      return
       }
-      localStorage.setItem('business', JSON.stringify(updatedBusiness))
-      return updatedBusiness
+      // Prevent fake path from being stored
+      if (name === 'logo') return
+
+    setBusiness(prev => {
+      const updated = { ...prev, [name]: value }
+      localStorage.setItem('business', JSON.stringify(updated))
+      return updated
     })
   }
 
@@ -105,3 +116,26 @@ export const useBusiness = () => {
   }
   return context
 }
+
+// Code that was causing issues
+
+// const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//   const { name, value } = e.target
+//   setBusiness((prevBusiness: BusinessState) => {
+//     const updatedBusiness = {
+//       ...prevBusiness, [name]: value
+//     }
+//     localStorage.setItem('business', JSON.stringify(updatedBusiness))
+//     return updatedBusiness
+//   })
+// }
+
+// if (name === 'logo' && files?.[0]) {
+//   const previewUrl = URL.createObjectURL(files[0])
+//   setBusiness(prev => {
+//     const updated = { ...prev, logo: previewUrl }
+//     localStorage.setItem('business', JSON.stringify(updated))
+//     return updated
+//   })
+//   return
+// }

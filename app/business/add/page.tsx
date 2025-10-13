@@ -47,16 +47,16 @@ export default function AddBusinessPage() {
               className='text-xs'
             >
               {item.label}
-            </label>
+            </label> 
             <Input
               name={item.name}
               type={item.type}
               required={item.required}
               onChange={handleChange}
-              value={(business[item.name as keyof BusinessState] || '') as 
-                | string
-                | number
-              }
+              {...(item.type !== 'file' && {
+                value: (business[item.name as keyof BusinessState] || '') as string
+              })}
+              {...(item.accept && { accept: item.accept })}
             />
           </div>
         ))}
@@ -71,3 +71,16 @@ export default function AddBusinessPage() {
     </div>
   )
 }
+
+// Code that was causing issues
+
+{/* <Input
+      name={item.name}
+      type={item.type}
+      required={item.required}
+      onChange={handleChange}
+      value={(business[item.name as keyof BusinessState] || '') as 
+        | string
+        | number
+      }
+    /> */}
