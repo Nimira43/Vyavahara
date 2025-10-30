@@ -118,7 +118,6 @@ export const useBusiness = () => {
 }
 
 // Code that was causing issues
-
 // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 //   const { name, value } = e.target
 //   setBusiness((prevBusiness: BusinessState) => {
